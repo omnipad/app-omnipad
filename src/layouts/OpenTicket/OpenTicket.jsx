@@ -1,4 +1,4 @@
-import openTicket from '../../assets/videos/ticket.mp4'
+import openTicket from '../../assets/videos/open-ticket.mp4'
 import Button from '../../components/Button'
 import S from './OpenTicket.style'
 
