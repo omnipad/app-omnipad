@@ -3,9 +3,11 @@ import Tools from './Tools'
 import S from './Home.style'
 import FloatButton from '../../components/FloatButton'
 import OpenTicket from '../../layouts/OpenTicket'
+import Logo from '../../components/Logo'
 
 const Home = ({ statusTicketModal, toggleTicketModal }) => (
   <S.Home>
+    <Logo />
     <S.Section left>
       <S.Title>Launch Pad</S.Title>
 

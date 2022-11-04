@@ -1,5 +1,6 @@
 import styled, { css, keyframes } from 'styled-components'
 import FloatButton from '../../components/FloatButton'
+import Logo from '../../components/Logo'
 import { Item } from './List'
 
 const Title = styled.h1`
@@ -181,6 +182,16 @@ const Section = styled.section`
 
 const Home = styled.main`
   display: flex;
+  justify-content: center;
+
+  & ${Logo} {
+    position: absolute;
+    top: 1rem;
+    background-color: var(--color-first-black);
+    border-radius: 50%;
+    width: 15rem;
+    z-index: 20;
+  }
 `
 
 export default {
