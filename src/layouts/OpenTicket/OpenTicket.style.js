@@ -1,6 +1,17 @@
 import styled, { css } from 'styled-components'
 import FloatButton from '../../components/FloatButton'
 
+const Close = styled.span`
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--color-error);
+  border-radius: 50%;
+  cursor: pointer;
+`
+
 const Title = styled.h1`
   text-align: center;
   color: var(--color-first);
@@ -11,6 +22,11 @@ const Video = styled.video`
   height: 75%;
   border: 0.1rem solid var(--color-second);
   border-radius: calc(var(--radius) / 2);
+
+  @media (max-width: 768px) { 
+    height: auto;
+    width: 98%;
+  }
 `
 
 const Modal = styled.div`
@@ -31,6 +47,12 @@ const Modal = styled.div`
 
   & > ${FloatButton} {
     position: relative;
+  }
+
+  @media (max-width: 768px) {  
+    width: 100%;
+    height: 100%;
+    border: none; 
   }
 `
 
@@ -55,16 +77,19 @@ const OpenTicket = styled.section`
   transform-origin: 25% bottom;
   transition: transform 0.6s ease-in-out;
   z-index: 100;
-
   transform: scale(0);
 
   ${hasActive};
+
+  @media (max-width: 768px) {
+    transform-origin: center bottom;
+  }
 `
 
 export default {
   OpenTicket,
   Modal,
   Video,
-  Title
-
+  Title,
+  Close
 }

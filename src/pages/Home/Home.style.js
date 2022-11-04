@@ -12,6 +12,7 @@ const Title = styled.h1`
   background-color: var(--color-first-black);
   padding: 0.5rem 2rem;
   border-radius: 2em;
+  text-align: center;
 
   transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 `
@@ -87,6 +88,10 @@ const hasLeft = ({ left }) => left && css`
     & ${Title} {
       color: var(--color-first)
     }
+  }
+
+  @media (max-width: 768px) {
+    border-bottom: 0.2rem solid var(--color-second-black);
   }
 `
 
@@ -178,6 +183,32 @@ const Section = styled.section`
 
   ${hasLeft};
   ${hasRight};
+
+  @media (max-width: 768px) {
+    border-right: 0;
+    width: 100%;
+    height: 90vh;
+
+    &::before, &::after {
+      display: none;
+    }
+
+    & ${FloatButton} {
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 10
+    }
+
+    & ${Item} {
+      display: none;
+    }
+
+    &:hover {
+      & ${Item} {
+        animation-play-state: paused;
+      }
+    }
+  }
 `
 
 const Home = styled.main`
@@ -191,6 +222,16 @@ const Home = styled.main`
     border-radius: 50%;
     width: 15rem;
     z-index: 20;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    & ${Logo} {
+      position: fixed;
+      width: 6rem;
+    }
   }
 `
 

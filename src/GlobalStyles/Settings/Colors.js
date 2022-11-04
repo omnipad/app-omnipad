@@ -11,6 +11,7 @@ const Colors = createGlobalStyle`
   --color-second-black: #464646;
 
   --color-white: #fff;
+  --color-error: #ec695d;
 }
 `
 

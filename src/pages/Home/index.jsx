@@ -1,4 +1,3 @@
-/* eslint-disable react/display-name */
 import useHome from './useHome'
 import Home from './Home'
 

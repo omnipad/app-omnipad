@@ -9,6 +9,7 @@ const Base = createGlobalStyle`
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
     background-color: var(--color-first-black);
+    min-width: 320px;
   }
 
   *::selection {

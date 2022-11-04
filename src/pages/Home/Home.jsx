@@ -1,3 +1,4 @@
+import { bool, func } from 'prop-types'
 import Services from './Services'
 import Tools from './Tools'
 import S from './Home.style'
@@ -24,5 +25,10 @@ const Home = ({ statusTicketModal, toggleTicketModal }) => (
     <OpenTicket closeModal={toggleTicketModal} status={statusTicketModal} />
   </S.Home>
 )
+
+Home.propTypes = {
+  statusTicketModal: bool.isRequired,
+  toggleTicketModal: func.isRequired
+}
 
 export default Home
