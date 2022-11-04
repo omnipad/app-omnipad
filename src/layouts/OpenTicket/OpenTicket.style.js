@@ -54,6 +54,7 @@ const OpenTicket = styled.section`
   background-color: var(--color-first-light-black);
   transform-origin: 25% bottom;
   transition: transform 0.6s ease-in-out;
+  z-index: 100;
 
   transform: scale(0);
 
