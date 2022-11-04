@@ -53,6 +53,7 @@ const Modal = styled.div`
     width: 100%;
     height: 100%;
     border: none; 
+    padding-top: 4rem;
   }
 `
 
